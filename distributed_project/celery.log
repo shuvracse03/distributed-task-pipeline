@@ -1,0 +1,32 @@
+[2023-07-29 10:51:53,393: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 10:51:53,396: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 10:51:53,397: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 10:51:53,400: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 10:51:54,419: INFO/MainProcess] mingle: all alone
+[2023-07-29 10:51:54,433: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/kombu/pidbox.py:72: UserWarning: A node named celery@localhost.localdomain is already using this process mailbox!
+
+Maybe you forgot to shutdown the other node or did not do so properly?
+Or if you meant to start multiple nodes on the same host please make sure
+you give each node a unique node name!
+
+  warnings.warn(W_PIDBOX_IN_USE.format(node=self))
+
+[2023-07-29 10:51:54,436: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 10:52:07,640: INFO/MainProcess] Task request_app.tasks.scrape_books[afc6d670-e6b3-4eb5-8e77-c84b3c299c5b] received
+[2023-07-29 10:52:07,641: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 10:52:07,641: WARNING/ForkPoolWorker-15] 1
+[2023-07-29 10:52:07,647: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[afc6d670-e6b3-4eb5-8e77-c84b3c299c5b] succeeded in 0.00538190100041902s: 'all'
+[2023-07-29 10:53:19,088: INFO/MainProcess] Task request_app.tasks.scrape_books[a558ea88-896c-4abf-a37c-873e02bbda9a] received
+[2023-07-29 10:53:19,090: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 10:53:19,090: WARNING/ForkPoolWorker-15] 1
+[2023-07-29 10:53:19,091: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[a558ea88-896c-4abf-a37c-873e02bbda9a] succeeded in 0.0012892240001747268s: 'all'
