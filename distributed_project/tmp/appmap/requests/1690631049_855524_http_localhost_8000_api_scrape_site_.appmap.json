@@ -1,1 +1,132 @@
-{"version": "1.9", "metadata": {"language": {"name": "python", "engine": "CPython", "version": "3.10.6"}, "client": {"name": "appmap", "url": "https://github.com/applandinc/appmap-python"}, "git": {"repository": "git@github.com:shuvracse03/distributed-task-pipeline.git", "branch": "main", "commit": "5d35b1683d2a808be33007329277fc0cfbb0ff72", "status": ["M celery.log", "M request_app/__pycache__/tasks.cpython-310.pyc", "M request_app/tasks.py", "?? ../appmap.yml", "?? tmp/appmap/requests/1690629880_345647_http_localhost_8000_api_scrape_site_.appmap.json", "?? tmp/appmap/requests/1690629933_073233_http_localhost_8000_api_scrape_site_.appmap.json", "?? tmp/appmap/requests/1690630874_669261_http_localhost_8000_api_scrape_site_.appmap.json", "?? tmp/appmap/requests/1690630939_850244_http_localhost_8000_api_scrape_site_.appmap.json"]}, "frameworks": [{"name": "Django", "version": "4.0.5"}], "name": "POST /api/scrape_site/ (500) - 11:44:09.855", "timestamp": 1690631049.855524, "recorder": {"name": "record_requests"}}, "events": [{"http_server_request": {"request_method": "POST", "protocol": "HTTP/1.1", "path_info": "/api/scrape_site/", "normalized_path_info": "/api/scrape_site/", "mime_type": "application/json", "headers": {"Content-Length": "50", "Content-Type": "application/json", "Host": "localhost:8000", "User-Agent": "curl/7.81.0", "Accept": "*/*"}}, "message": [{"object_id": 140205248972816, "value": "'Travel,Mystery,Historical Fiction'", "name": "book_types", "class": "builtins.str"}], "id": 1, "event": "call", "thread_id": 1}, {"receiver": {"object_id": 140205248538576, "value": "<Template template_string=\"<!DOCTYPE html><htm...\">", "class": "django.template.base.Template"}, "path": "<unknown source>", "id": 2, "event": "call", "thread_id": 1, "defined_class": "<templates>.UnknownSource", "method_id": "render", "static": false}, {"parent_id": 2, "elapsed": 0.011788263999733317, "id": 3, "event": "return", "thread_id": 1}, {"http_server_response": {"status_code": 500, "mime_type": "text/html", "headers": {"Content-Type": "text/html", "X-Frame-Options": "DENY", "Content-Length": "93069", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "same-origin", "Cross-Origin-Opener-Policy": "same-origin"}}, "parent_id": 1, "elapsed": 0.031308747000366566, "id": 4, "event": "return", "thread_id": 1}], "classMap": []}
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "POST",
+        "protocol": "HTTP/1.1",
+        "path_info": "/api/scrape_site/",
+        "normalized_path_info": "/api/scrape_site/",
+        "mime_type": "application/json",
+        "headers": {
+          "Content-Length": "50",
+          "Content-Type": "application/json",
+          "Host": "localhost:8000",
+          "User-Agent": "curl/7.81.0",
+          "Accept": "*/*"
+        }
+      },
+      "message": [
+        {
+          "object_id": 140205248972816,
+          "value": "'Travel,Mystery,Historical Fiction'",
+          "name": "book_types",
+          "class": "builtins.str"
+        }
+      ],
+      "id": 1,
+      "event": "call",
+      "thread_id": 1
+    },
+    {
+      "receiver": {
+        "object_id": 140205248538576,
+        "value": "<Template template_string=\"<!DOCTYPE html><htm...\">",
+        "class": "django.template.base.Template"
+      },
+      "path": "<unknown source>",
+      "id": 2,
+      "event": "call",
+      "thread_id": 1,
+      "defined_class": "<templates>.UnknownSource",
+      "method_id": "render",
+      "static": false
+    },
+    {
+      "parent_id": 2,
+      "elapsed": 0.011788263999733317,
+      "id": 3,
+      "event": "return",
+      "thread_id": 1
+    },
+    {
+      "http_server_response": {
+        "status_code": 500,
+        "mime_type": "text/html",
+        "headers": {
+          "Content-Type": "text/html",
+          "X-Frame-Options": "DENY",
+          "Content-Length": "93069",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.031308747000366566,
+      "id": 4,
+      "event": "return",
+      "thread_id": 1
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.10.6"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "git@github.com:shuvracse03/distributed-task-pipeline.git",
+      "branch": "main",
+      "commit": "5d35b1683d2a808be33007329277fc0cfbb0ff72",
+      "status": [
+        "M celery.log",
+        "M request_app/__pycache__/tasks.cpython-310.pyc",
+        "M request_app/tasks.py",
+        "?? ../appmap.yml",
+        "?? tmp/appmap/requests/1690629880_345647_http_localhost_8000_api_scrape_site_.appmap.json",
+        "?? tmp/appmap/requests/1690629933_073233_http_localhost_8000_api_scrape_site_.appmap.json",
+        "?? tmp/appmap/requests/1690630874_669261_http_localhost_8000_api_scrape_site_.appmap.json",
+        "?? tmp/appmap/requests/1690630939_850244_http_localhost_8000_api_scrape_site_.appmap.json"
+      ]
+    },
+    "frameworks": [
+      {
+        "name": "Django",
+        "version": "4.0.5"
+      }
+    ],
+    "name": "POST /api/scrape_site/ (500) - 11:44:09.855",
+    "timestamp": 1690631049.855524,
+    "recorder": {
+      "name": "record_requests"
+    }
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /api/scrape_site/"
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "<templates>/UnknownSource",
+      "children": [
+        {
+          "type": "function",
+          "name": "render",
+          "static": false
+        }
+      ]
+    }
+  ]
+}

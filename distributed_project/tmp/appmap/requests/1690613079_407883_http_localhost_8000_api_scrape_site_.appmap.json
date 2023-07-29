@@ -1,1 +1,95 @@
-{"version": "1.9", "metadata": {"language": {"name": "python", "engine": "CPython", "version": "3.10.6"}, "client": {"name": "appmap", "url": "https://github.com/applandinc/appmap-python"}, "git": {"repository": "git@github.com:shuvracse03/distributed-task-pipeline.git", "branch": "main", "commit": "7d4269018ca0f5ac882b594851a798fcaa668580", "status": ["?? ./"]}, "frameworks": [{"name": "Django", "version": "4.0.5"}], "name": "POST /api/scrape_site/ (200) - 06:44:39.407", "timestamp": 1690613079.407883, "recorder": {"name": "record_requests"}}, "events": [{"http_server_request": {"request_method": "POST", "protocol": "HTTP/1.1", "path_info": "/api/scrape_site/", "normalized_path_info": "/api/scrape_site/", "mime_type": "application/json", "headers": {"Content-Length": "20", "Content-Type": "application/json", "Host": "localhost:8000", "User-Agent": "curl/7.81.0", "Accept": "*/*"}}, "message": [{"object_id": 140469941896432, "value": "'all'", "name": "book_types", "class": "builtins.str"}], "id": 1, "event": "call", "thread_id": 1}, {"http_server_response": {"status_code": 200, "mime_type": "application/json", "headers": {"Content-Type": "application/json", "Vary": "Accept", "Allow": "POST, OPTIONS", "X-Frame-Options": "DENY", "Content-Length": "34", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "same-origin", "Cross-Origin-Opener-Policy": "same-origin"}}, "parent_id": 1, "elapsed": 0.0038110279999727936, "id": 2, "event": "return", "thread_id": 1}], "classMap": []}
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "POST",
+        "protocol": "HTTP/1.1",
+        "path_info": "/api/scrape_site/",
+        "normalized_path_info": "/api/scrape_site/",
+        "mime_type": "application/json",
+        "headers": {
+          "Content-Length": "20",
+          "Content-Type": "application/json",
+          "Host": "localhost:8000",
+          "User-Agent": "curl/7.81.0",
+          "Accept": "*/*"
+        }
+      },
+      "message": [
+        {
+          "object_id": 140469941896432,
+          "value": "'all'",
+          "name": "book_types",
+          "class": "builtins.str"
+        }
+      ],
+      "id": 1,
+      "event": "call",
+      "thread_id": 1
+    },
+    {
+      "http_server_response": {
+        "status_code": 200,
+        "mime_type": "application/json",
+        "headers": {
+          "Content-Type": "application/json",
+          "Vary": "Accept",
+          "Allow": "POST, OPTIONS",
+          "X-Frame-Options": "DENY",
+          "Content-Length": "34",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.0038110279999727936,
+      "id": 2,
+      "event": "return",
+      "thread_id": 1
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.10.6"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "git@github.com:shuvracse03/distributed-task-pipeline.git",
+      "branch": "main",
+      "commit": "7d4269018ca0f5ac882b594851a798fcaa668580",
+      "status": [
+        "?? ./"
+      ]
+    },
+    "frameworks": [
+      {
+        "name": "Django",
+        "version": "4.0.5"
+      }
+    ],
+    "name": "POST /api/scrape_site/ (200) - 06:44:39.407",
+    "timestamp": 1690613079.407883,
+    "recorder": {
+      "name": "record_requests"
+    }
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /api/scrape_site/"
+        }
+      ]
+    }
+  ]
+}

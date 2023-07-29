@@ -1,1 +1,216 @@
-{"version": "1.9", "metadata": {"language": {"name": "python", "engine": "CPython", "version": "3.10.6"}, "client": {"name": "appmap", "url": "https://github.com/applandinc/appmap-python"}, "git": {"repository": "git@github.com:shuvracse03/distributed-task-pipeline.git", "branch": "main", "commit": "7d4269018ca0f5ac882b594851a798fcaa668580", "status": ["?? ./"]}, "frameworks": [{"name": "Django", "version": "4.0.5"}], "name": "POST /api/scrape_site/ (200) - 10:45:07.117", "timestamp": 1690627507.117316, "recorder": {"name": "record_requests"}}, "events": [{"http_server_request": {"request_method": "POST", "protocol": "HTTP/1.1", "path_info": "/api/scrape_site/", "normalized_path_info": "/api/scrape_site/", "mime_type": "application/json", "headers": {"Content-Length": "20", "Content-Type": "application/json", "Host": "localhost:8000", "User-Agent": "curl/7.81.0", "Accept": "*/*"}}, "message": [{"object_id": 140514141619440, "value": "'all'", "name": "book_types", "class": "builtins.str"}], "id": 5, "event": "call", "thread_id": 2}, {"static": false, "receiver": {"kind": "req", "object_id": 140514132375392, "value": "<@task: request_app.tasks.scrape_books of distributed_project at 0x7fcbff729540>", "name": "self", "class": "request_app.tasks.scrape_books"}, "parameters": [{"kind": "opt", "object_id": 94110477128672, "value": "None", "name": "args", "class": "builtins.NoneType"}, {"kind": "opt", "object_id": 94110477128672, "value": "None", "name": "kwargs", "class": "builtins.NoneType"}, {"kind": "opt", "object_id": 94110477128672, "value": "None", "name": "task_id", "class": "builtins.NoneType"}, {"kind": "opt", "object_id": 94110477128672, "value": "None", "name": "producer", "class": "builtins.NoneType"}, {"kind": "opt", "object_id": 94110477128672, "value": "None", "name": "link", "class": "builtins.NoneType"}, {"kind": "opt", "object_id": 94110477128672, "value": "None", "name": "link_error", "class": "builtins.NoneType"}, {"kind": "opt", "object_id": 94110477128672, "value": "None", "name": "shadow", "class": "builtins.NoneType"}, {"kind": "keyrest", "object_id": 140514259509312, "value": "{}", "name": "options", "class": "builtins.dict", "size": 0}], "id": 6, "event": "call", "thread_id": 2, "defined_class": "celery.app.task.Task", "method_id": "apply_async", "path": "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/task.py", "lineno": 446}, {"return_value": {"object_id": 140514137266912, "value": "<AsyncResult: 1f9f04c6-8186-407b-8eb2-f700bc86354c>", "class": "celery.result.AsyncResult"}, "parent_id": 6, "elapsed": 0.015950679779052734, "id": 7, "event": "return", "thread_id": 2}, {"http_server_response": {"status_code": 200, "mime_type": "application/json", "headers": {"Content-Type": "application/json", "Vary": "Accept", "Allow": "POST, OPTIONS", "X-Frame-Options": "DENY", "Content-Length": "34", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "same-origin", "Cross-Origin-Opener-Policy": "same-origin"}}, "parent_id": 5, "elapsed": 0.01700545299991063, "id": 8, "event": "return", "thread_id": 2}], "classMap": [{"name": "celery", "type": "package", "children": [{"name": "app", "type": "package", "children": [{"name": "task", "type": "package", "children": [{"name": "Task", "type": "class", "children": [{"name": "apply_async", "type": "function", "location": "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/task.py:446", "static": false, "labels": ["job.create"], "comment": "Apply tasks asynchronously by sending a message.\n\nArguments:\n    args (Tuple): The positional arguments to pass on to the task.\n\n    kwargs (Dict): The keyword arguments to pass on to the task.\n\n    countdown (float): Number of seconds into the future that the\n        task should execute.  Defaults to immediate execution.\n\n    eta (~datetime.datetime): Absolute time and date of when the task\n        should be executed.  May not be specified if `countdown`\n        is also supplied.\n\n    expires (float, ~datetime.datetime): Datetime or\n        seconds in the future for the task should expire.\n        The task won't be executed after the expiration time.\n\n    shadow (str): Override task name used in logs/monitoring.\n        Default is retrieved from :meth:`shadow_name`.\n\n    connection (kombu.Connection): Re-use existing broker connection\n        instead of acquiring one from the connection pool.\n\n    retry (bool): If enabled sending of the task message will be\n        retried in the event of connection loss or failure.\n        Default is taken from the :setting:`task_publish_retry`\n        setting.  Note that you need to handle the\n        producer/connection manually for this to work.\n\n    retry_policy (Mapping): Override the retry policy used.\n        See the :setting:`task_publish_retry_policy` setting.\n\n    time_limit (int): If set, overrides the default time limit.\n\n    soft_time_limit (int): If set, overrides the default soft\n        time limit.\n\n    queue (str, kombu.Queue): The queue to route the task to.\n        This must be a key present in :setting:`task_queues`, or\n        :setting:`task_create_missing_queues` must be\n        enabled.  See :ref:`guide-routing` for more\n        information.\n\n    exchange (str, kombu.Exchange): Named custom exchange to send the\n        task to.  Usually not used in combination with the ``queue``\n        argument.\n\n    routing_key (str): Custom routing key used to route the task to a\n        worker server.  If in combination with a ``queue`` argument\n        only used to specify custom routing keys to topic exchanges.\n\n    priority (int): The task priority, a number between 0 and 9.\n        Defaults to the :attr:`priority` attribute.\n\n    serializer (str): Serialization method to use.\n        Can be `pickle`, `json`, `yaml`, `msgpack` or any custom\n        serialization method that's been registered\n        with :mod:`kombu.serialization.registry`.\n        Defaults to the :attr:`serializer` attribute.\n\n    compression (str): Optional compression method\n        to use.  Can be one of ``zlib``, ``bzip2``,\n        or any custom compression methods registered with\n        :func:`kombu.compression.register`.\n        Defaults to the :setting:`task_compression` setting.\n\n    link (Signature): A single, or a list of tasks signatures\n        to apply if the task returns successfully.\n\n    link_error (Signature): A single, or a list of task signatures\n        to apply if an error occurs while executing the task.\n\n    producer (kombu.Producer): custom producer to use when publishing\n        the task.\n\n    add_to_parent (bool): If set to True (default) and the task\n        is applied while executing another task, then the result\n        will be appended to the parent tasks ``request.children``\n        attribute.  Trailing can also be disabled by default using the\n        :attr:`trail` attribute\n\n    ignore_result (bool): If set to `False` (default) the result\n        of a task will be stored in the backend. If set to `True`\n        the result will not be stored. This can also be set\n        using the :attr:`ignore_result` in the `app.task` decorator.\n\n    publisher (kombu.Producer): Deprecated alias to ``producer``.\n\n    headers (Dict): Message headers to be included in the message.\n\nReturns:\n    celery.result.AsyncResult: Promise of future evaluation.\n\nRaises:\n    TypeError: If not enough arguments are passed, or too many\n        arguments are passed.  Note that signature checks may\n        be disabled by specifying ``@task(typing=False)``.\n    kombu.exceptions.OperationalError: If a connection to the\n       transport cannot be made, or if the connection is lost.\n\nNote:\n    Also supports all keyword arguments supported by\n    :meth:`kombu.Producer.publish`."}]}]}]}]}]}
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "POST",
+        "protocol": "HTTP/1.1",
+        "path_info": "/api/scrape_site/",
+        "normalized_path_info": "/api/scrape_site/",
+        "mime_type": "application/json",
+        "headers": {
+          "Content-Length": "20",
+          "Content-Type": "application/json",
+          "Host": "localhost:8000",
+          "User-Agent": "curl/7.81.0",
+          "Accept": "*/*"
+        }
+      },
+      "message": [
+        {
+          "object_id": 140514141619440,
+          "value": "'all'",
+          "name": "book_types",
+          "class": "builtins.str"
+        }
+      ],
+      "id": 1,
+      "event": "call",
+      "thread_id": 2
+    },
+    {
+      "static": false,
+      "receiver": {
+        "kind": "req",
+        "object_id": 140514132375392,
+        "value": "<@task: request_app.tasks.scrape_books of distributed_project at 0x7fcbff729540>",
+        "name": "self",
+        "class": "request_app.tasks.scrape_books"
+      },
+      "parameters": [
+        {
+          "kind": "opt",
+          "object_id": 94110477128672,
+          "value": "None",
+          "name": "args",
+          "class": "builtins.NoneType"
+        },
+        {
+          "kind": "opt",
+          "object_id": 94110477128672,
+          "value": "None",
+          "name": "kwargs",
+          "class": "builtins.NoneType"
+        },
+        {
+          "kind": "opt",
+          "object_id": 94110477128672,
+          "value": "None",
+          "name": "task_id",
+          "class": "builtins.NoneType"
+        },
+        {
+          "kind": "opt",
+          "object_id": 94110477128672,
+          "value": "None",
+          "name": "producer",
+          "class": "builtins.NoneType"
+        },
+        {
+          "kind": "opt",
+          "object_id": 94110477128672,
+          "value": "None",
+          "name": "link",
+          "class": "builtins.NoneType"
+        },
+        {
+          "kind": "opt",
+          "object_id": 94110477128672,
+          "value": "None",
+          "name": "link_error",
+          "class": "builtins.NoneType"
+        },
+        {
+          "kind": "opt",
+          "object_id": 94110477128672,
+          "value": "None",
+          "name": "shadow",
+          "class": "builtins.NoneType"
+        },
+        {
+          "kind": "keyrest",
+          "object_id": 140514259509312,
+          "value": "{}",
+          "name": "options",
+          "class": "builtins.dict",
+          "size": 0
+        }
+      ],
+      "id": 2,
+      "event": "call",
+      "thread_id": 2,
+      "defined_class": "celery.app.task.Task",
+      "method_id": "apply_async",
+      "path": "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/task.py",
+      "lineno": 446
+    },
+    {
+      "return_value": {
+        "object_id": 140514137266912,
+        "value": "<AsyncResult: 1f9f04c6-8186-407b-8eb2-f700bc86354c>",
+        "class": "celery.result.AsyncResult"
+      },
+      "parent_id": 2,
+      "elapsed": 0.015950679779052734,
+      "id": 3,
+      "event": "return",
+      "thread_id": 2
+    },
+    {
+      "http_server_response": {
+        "status_code": 200,
+        "mime_type": "application/json",
+        "headers": {
+          "Content-Type": "application/json",
+          "Vary": "Accept",
+          "Allow": "POST, OPTIONS",
+          "X-Frame-Options": "DENY",
+          "Content-Length": "34",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.01700545299991063,
+      "id": 4,
+      "event": "return",
+      "thread_id": 2
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.10.6"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "git@github.com:shuvracse03/distributed-task-pipeline.git",
+      "branch": "main",
+      "commit": "7d4269018ca0f5ac882b594851a798fcaa668580",
+      "status": [
+        "?? ./"
+      ]
+    },
+    "frameworks": [
+      {
+        "name": "Django",
+        "version": "4.0.5"
+      }
+    ],
+    "name": "POST /api/scrape_site/ (200) - 10:45:07.117",
+    "timestamp": 1690627507.117316,
+    "recorder": {
+      "name": "record_requests"
+    }
+  },
+  "classMap": [
+    {
+      "name": "celery",
+      "type": "package",
+      "children": [
+        {
+          "name": "app",
+          "type": "package",
+          "children": [
+            {
+              "name": "task",
+              "type": "package",
+              "children": [
+                {
+                  "name": "Task",
+                  "type": "class",
+                  "children": [
+                    {
+                      "name": "apply_async",
+                      "type": "function",
+                      "labels": [
+                        "job.create"
+                      ],
+                      "static": false,
+                      "location": "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/task.py:446"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /api/scrape_site/"
+        }
+      ]
+    }
+  ]
+}
