@@ -30,3 +30,505 @@ you give each node a unique node name!
 [2023-07-29 10:53:19,090: WARNING/ForkPoolWorker-15] inside scrape books
 [2023-07-29 10:53:19,090: WARNING/ForkPoolWorker-15] 1
 [2023-07-29 10:53:19,091: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[a558ea88-896c-4abf-a37c-873e02bbda9a] succeeded in 0.0012892240001747268s: 'all'
+[2023-07-29 11:24:17,231: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:24:17,234: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:24:17,235: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:24:17,239: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:24:18,260: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:24:18,271: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 11:24:40,345: INFO/MainProcess] Task request_app.tasks.scrape_books[f1ab2042-cfa3-4d9f-8baa-f23390cec13d] received
+[2023-07-29 11:24:40,346: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 11:24:42,268: ERROR/ForkPoolWorker-15] Task request_app.tasks.scrape_books[f1ab2042-cfa3-4d9f-8baa-f23390cec13d] raised unexpected: NameError("name 'BeautifulSoup' is not defined")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 31, in scrape_books
+    book_cats = get_book_categories()
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 14, in get_book_categories
+    soup = BeautifulSoup(r.text, 'html.parser')
+NameError: name 'BeautifulSoup' is not defined
+[2023-07-29 11:25:29,355: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:25:29,358: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:25:29,359: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:25:29,363: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:25:30,381: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:25:30,394: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 11:25:33,073: INFO/MainProcess] Task request_app.tasks.scrape_books[14f9b34e-4f44-485d-bc74-b93a71168a84] received
+[2023-07-29 11:25:33,074: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 11:25:36,136: WARNING/ForkPoolWorker-15] ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 11:25:36,136: WARNING/ForkPoolWorker-15] 3
+[2023-07-29 11:25:36,136: WARNING/ForkPoolWorker-15] ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 11:25:36,140: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[14f9b34e-4f44-485d-bc74-b93a71168a84] succeeded in 3.0664196300003823s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 11:41:10,953: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:41:10,957: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:41:10,958: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:41:10,961: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:41:11,980: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:41:12,001: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 11:41:14,669: INFO/MainProcess] Task request_app.tasks.scrape_books[e113c565-6048-47f3-88ef-3fe50b75dbe8] received
+[2023-07-29 11:41:14,670: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 11:41:16,393: WARNING/ForkPoolWorker-15] process link:
+[2023-07-29 11:41:16,394: WARNING/ForkPoolWorker-15]  
+[2023-07-29 11:41:16,394: WARNING/ForkPoolWorker-15] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 11:41:16,394: WARNING/ForkPoolWorker-15] process link:
+[2023-07-29 11:41:16,394: WARNING/ForkPoolWorker-15]  
+[2023-07-29 11:41:16,394: WARNING/ForkPoolWorker-15] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 11:41:16,408: ERROR/ForkPoolWorker-15] Task request_app.tasks.scrape_books[e113c565-6048-47f3-88ef-3fe50b75dbe8] raised unexpected: AttributeError("'NoneType' object has no attribute 'app'")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 53, in scrape_books
+    result = jobs.apply_async()
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/canvas.py", line 1589, in apply_async
+    app = self.app
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/canvas.py", line 1927, in app
+    app = self.tasks[0].app
+AttributeError: 'NoneType' object has no attribute 'app'
+[2023-07-29 11:42:14,925: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:42:14,929: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:42:14,929: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:42:14,932: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:42:15,953: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:42:15,965: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 11:42:19,850: INFO/MainProcess] Task request_app.tasks.scrape_books[0164b300-a82c-427d-b3cf-dca0d086a6c9] received
+[2023-07-29 11:42:19,851: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 11:42:21,521: WARNING/ForkPoolWorker-15] process link:
+[2023-07-29 11:42:21,521: WARNING/ForkPoolWorker-15]  
+[2023-07-29 11:42:21,521: WARNING/ForkPoolWorker-15] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 11:42:21,521: WARNING/ForkPoolWorker-15] process link:
+[2023-07-29 11:42:21,521: WARNING/ForkPoolWorker-15]  
+[2023-07-29 11:42:21,521: WARNING/ForkPoolWorker-15] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 11:42:21,526: ERROR/ForkPoolWorker-15] Task request_app.tasks.scrape_books[0164b300-a82c-427d-b3cf-dca0d086a6c9] raised unexpected: AttributeError("'NoneType' object has no attribute 'app'")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 53, in scrape_books
+    jobs.apply_async()
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/canvas.py", line 1589, in apply_async
+    app = self.app
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/canvas.py", line 1927, in app
+    app = self.tasks[0].app
+AttributeError: 'NoneType' object has no attribute 'app'
+[2023-07-29 11:44:07,320: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:44:07,323: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:44:07,324: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:44:07,327: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:44:08,346: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:44:08,358: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 11:44:24,741: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:44:24,745: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:44:24,745: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:44:24,747: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:44:25,766: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:44:25,779: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 11:44:27,440: INFO/MainProcess] Task request_app.tasks.scrape_books[6a25dc8d-6b7d-453a-b0de-1fa7dc70f1fc] received
+[2023-07-29 11:44:27,441: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 11:44:29,410: WARNING/ForkPoolWorker-15] process link:
+[2023-07-29 11:44:29,410: WARNING/ForkPoolWorker-15]  
+[2023-07-29 11:44:29,410: WARNING/ForkPoolWorker-15] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 11:44:29,410: WARNING/ForkPoolWorker-15] process link:
+[2023-07-29 11:44:29,410: WARNING/ForkPoolWorker-15]  
+[2023-07-29 11:44:29,410: WARNING/ForkPoolWorker-15] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 11:44:29,415: ERROR/ForkPoolWorker-15] Task request_app.tasks.scrape_books[6a25dc8d-6b7d-453a-b0de-1fa7dc70f1fc] raised unexpected: AttributeError("'NoneType' object has no attribute 'app'")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 53, in scrape_books
+    jobs.apply_async()
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/canvas.py", line 1589, in apply_async
+    app = self.app
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/canvas.py", line 1927, in app
+    app = self.tasks[0].app
+AttributeError: 'NoneType' object has no attribute 'app'
+[2023-07-29 11:46:37,615: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:46:37,618: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:46:37,619: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:46:37,624: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:46:38,644: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:46:38,656: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 11:46:39,547: INFO/MainProcess] Task request_app.tasks.scrape_books[f05c2c51-8c0c-40c2-bdc3-db1030e08ea4] received
+[2023-07-29 11:46:39,548: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 11:46:41,710: INFO/MainProcess] Task request_app.tasks.process_link[ef97113a-b846-4dd6-a49d-bc929dd11a32] received
+[2023-07-29 11:46:41,711: WARNING/ForkPoolWorker-16] process link:
+[2023-07-29 11:46:41,711: WARNING/ForkPoolWorker-16]  
+[2023-07-29 11:46:41,711: WARNING/ForkPoolWorker-16] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 11:46:41,717: INFO/MainProcess] Task request_app.tasks.process_link[b19d96b1-7608-4d8d-a503-4bc5b641e379] received
+[2023-07-29 11:46:41,717: INFO/ForkPoolWorker-16] Task request_app.tasks.process_link[ef97113a-b846-4dd6-a49d-bc929dd11a32] succeeded in 0.005878880000636855s: None
+[2023-07-29 11:46:41,718: INFO/MainProcess] Task request_app.tasks.process_link[61f177fd-2428-4e7e-92ec-0badf7c09865] received
+[2023-07-29 11:46:41,718: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[f05c2c51-8c0c-40c2-bdc3-db1030e08ea4] succeeded in 2.1705688590000136s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 11:46:41,719: WARNING/ForkPoolWorker-16] process link:
+[2023-07-29 11:46:41,719: WARNING/ForkPoolWorker-16]  
+[2023-07-29 11:46:41,719: WARNING/ForkPoolWorker-16] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 11:46:41,719: INFO/ForkPoolWorker-16] Task request_app.tasks.process_link[b19d96b1-7608-4d8d-a503-4bc5b641e379] succeeded in 0.0006903579997015186s: None
+[2023-07-29 11:46:41,719: WARNING/ForkPoolWorker-1] process link:
+[2023-07-29 11:46:41,720: WARNING/ForkPoolWorker-1]  
+[2023-07-29 11:46:41,720: WARNING/ForkPoolWorker-1] https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[2023-07-29 11:46:41,724: INFO/ForkPoolWorker-1] Task request_app.tasks.process_link[61f177fd-2428-4e7e-92ec-0badf7c09865] succeeded in 0.005091284000627638s: None
+[2023-07-29 11:46:48,237: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:46:48,241: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 11:46:48,241: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 11:46:48,244: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 11:46:49,266: INFO/MainProcess] mingle: all alone
+[2023-07-29 11:46:49,281: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:18:17,044: INFO/MainProcess] Task request_app.tasks.scrape_books[c050fc0a-1634-42f8-9257-6e336a6280fd] received
+[2023-07-29 12:18:17,046: WARNING/ForkPoolWorker-15] inside scrape books
+[2023-07-29 12:18:19,197: INFO/MainProcess] Task request_app.tasks.process_link[e6948228-470f-42fc-9cec-918415f734c9] received
+[2023-07-29 12:18:19,198: WARNING/ForkPoolWorker-16] process link:
+[2023-07-29 12:18:19,198: WARNING/ForkPoolWorker-16]  
+[2023-07-29 12:18:19,198: WARNING/ForkPoolWorker-16] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 12:18:19,204: INFO/MainProcess] Task request_app.tasks.process_link[5a43e0bc-bf5c-463e-9ae4-bbaf1ca91433] received
+[2023-07-29 12:18:19,204: INFO/ForkPoolWorker-16] Task request_app.tasks.process_link[e6948228-470f-42fc-9cec-918415f734c9] succeeded in 0.006443470999329293s: None
+[2023-07-29 12:18:19,204: INFO/MainProcess] Task request_app.tasks.process_link[d32c3a4d-3ecb-446e-92d2-c8b131327026] received
+[2023-07-29 12:18:19,205: WARNING/ForkPoolWorker-16] process link:
+[2023-07-29 12:18:19,205: WARNING/ForkPoolWorker-16]  
+[2023-07-29 12:18:19,205: WARNING/ForkPoolWorker-16] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 12:18:19,205: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[c050fc0a-1634-42f8-9257-6e336a6280fd] succeeded in 2.159498924000218s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 12:18:19,205: WARNING/ForkPoolWorker-1] process link:
+[2023-07-29 12:18:19,205: INFO/ForkPoolWorker-16] Task request_app.tasks.process_link[5a43e0bc-bf5c-463e-9ae4-bbaf1ca91433] succeeded in 0.0005996639993099961s: None
+[2023-07-29 12:18:19,205: WARNING/ForkPoolWorker-1]  
+[2023-07-29 12:18:19,205: WARNING/ForkPoolWorker-1] https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[2023-07-29 12:18:19,210: INFO/ForkPoolWorker-1] Task request_app.tasks.process_link[d32c3a4d-3ecb-446e-92d2-c8b131327026] succeeded in 0.004756480999276391s: None
+[2023-07-29 12:36:22,378: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:36:22,382: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 12:36:22,382: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:36:22,384: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 12:36:23,401: INFO/MainProcess] mingle: all alone
+[2023-07-29 12:36:23,413: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:36:26,502: INFO/MainProcess] Task request_app.tasks.scrape_books[93aaf314-6ca2-43f7-b410-bedfc67262bf] received
+[2023-07-29 12:36:31,702: INFO/MainProcess] Task request_app.tasks.process_link[916ebb0d-2d68-4614-9506-9d91e3906733] received
+[2023-07-29 12:36:31,708: INFO/MainProcess] Task request_app.tasks.process_link[c6d7cb3f-904e-455e-8e14-16eae557aa1d] received
+[2023-07-29 12:36:31,708: INFO/MainProcess] Task request_app.tasks.process_link[ef2bf174-1661-4035-aec9-14c53483c103] received
+[2023-07-29 12:36:31,709: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[93aaf314-6ca2-43f7-b410-bedfc67262bf] succeeded in 5.206564366000748s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 12:36:33,606: ERROR/ForkPoolWorker-16] Task request_app.tasks.process_link[916ebb0d-2d68-4614-9506-9d91e3906733] raised unexpected: AttributeError("'NoneType' object has no attribute 'text'")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 109, in process_link
+    links = get_product_links(url) # get all product links from category url
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 39, in get_product_links
+    no_pages = int(soup.find('li', {"class": "current"}).text.strip().split(' ')[-1])
+AttributeError: 'NoneType' object has no attribute 'text'
+[2023-07-29 12:36:37,184: ERROR/ForkPoolWorker-2] Task request_app.tasks.process_link[ef2bf174-1661-4035-aec9-14c53483c103] raised unexpected: NameError("name 're' is not defined")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 110, in process_link
+    all_infos = get_all_infos(links, url) # now get information from each product link
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 86, in get_all_infos
+    result= get_book_info(a_link, parent_url)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 67, in get_book_info
+    info['price_exclude_tax'] = re.sub("[^\d\.]", "", data['Price (excl. tax)'])
+NameError: name 're' is not defined
+[2023-07-29 12:36:37,184: ERROR/ForkPoolWorker-1] Task request_app.tasks.process_link[c6d7cb3f-904e-455e-8e14-16eae557aa1d] raised unexpected: NameError("name 're' is not defined")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 110, in process_link
+    all_infos = get_all_infos(links, url) # now get information from each product link
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 86, in get_all_infos
+    result= get_book_info(a_link, parent_url)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 67, in get_book_info
+    info['price_exclude_tax'] = re.sub("[^\d\.]", "", data['Price (excl. tax)'])
+NameError: name 're' is not defined
+[2023-07-29 12:38:12,271: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:38:12,274: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 12:38:12,275: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:38:12,277: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 12:38:13,298: INFO/MainProcess] mingle: all alone
+[2023-07-29 12:38:13,319: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:38:54,672: INFO/MainProcess] Task request_app.tasks.scrape_books[af35fac1-5204-4ec0-b1a5-2a976351ea0d] received
+[2023-07-29 12:38:59,352: INFO/MainProcess] Task request_app.tasks.process_link[21f5a548-fda0-4f3a-a5cb-984ec0a8af4c] received
+[2023-07-29 12:38:59,358: INFO/MainProcess] Task request_app.tasks.process_link[c25a5ea9-1fe2-4941-8691-f83d6ee844de] received
+[2023-07-29 12:38:59,359: INFO/MainProcess] Task request_app.tasks.process_link[2610eb31-d14b-4982-a90e-e4435de375f2] received
+[2023-07-29 12:38:59,360: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[af35fac1-5204-4ec0-b1a5-2a976351ea0d] succeeded in 4.6867965389992605s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 12:39:01,374: ERROR/ForkPoolWorker-16] Task request_app.tasks.process_link[21f5a548-fda0-4f3a-a5cb-984ec0a8af4c] raised unexpected: AttributeError("'NoneType' object has no attribute 'text'")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 110, in process_link
+    links = get_product_links(url) # get all product links from category url
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 40, in get_product_links
+    no_pages = int(soup.find('li', {"class": "current"}).text.strip().split(' ')[-1])
+AttributeError: 'NoneType' object has no attribute 'text'
+[2023-07-29 12:39:33,316: ERROR/ForkPoolWorker-2] Task request_app.tasks.process_link[2610eb31-d14b-4982-a90e-e4435de375f2] raised unexpected: NameError("name 'insert_to_db' is not defined")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 112, in process_link
+    insert_to_db(all_infos) # insert to database
+NameError: name 'insert_to_db' is not defined
+[2023-07-29 12:39:34,034: ERROR/ForkPoolWorker-1] Task request_app.tasks.process_link[c25a5ea9-1fe2-4941-8691-f83d6ee844de] raised unexpected: NameError("name 'insert_to_db' is not defined")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 112, in process_link
+    insert_to_db(all_infos) # insert to database
+NameError: name 'insert_to_db' is not defined
+[2023-07-29 12:40:13,567: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:40:13,570: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 12:40:13,571: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:40:13,573: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 12:40:14,592: INFO/MainProcess] mingle: all alone
+[2023-07-29 12:40:14,608: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:40:18,130: INFO/MainProcess] Task request_app.tasks.scrape_books[aefc256c-9dee-4206-b9da-aee4c6c23670] received
+[2023-07-29 12:40:19,937: INFO/MainProcess] Task request_app.tasks.process_link[5986c2d5-e823-4479-b45d-befe5f00b9a4] received
+[2023-07-29 12:40:19,941: INFO/MainProcess] Task request_app.tasks.process_link[08ca5f00-8fce-4b8d-b0f1-ff8432b191f6] received
+[2023-07-29 12:40:19,941: INFO/MainProcess] Task request_app.tasks.process_link[844b9fee-b8b8-4292-b178-ba5f976a2bc0] received
+[2023-07-29 12:40:19,942: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[aefc256c-9dee-4206-b9da-aee4c6c23670] succeeded in 1.8113103939995199s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 12:40:21,860: WARNING/ForkPoolWorker-2] https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[2023-07-29 12:40:21,864: WARNING/ForkPoolWorker-16] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 12:40:21,870: WARNING/ForkPoolWorker-1] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 12:40:21,873: ERROR/ForkPoolWorker-16] Task request_app.tasks.process_link[5986c2d5-e823-4479-b45d-befe5f00b9a4] raised unexpected: AttributeError("'NoneType' object has no attribute 'text'")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 120, in process_link
+    links = get_product_links(url) # get all product links from category url
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 50, in get_product_links
+    no_pages = int(soup.find('li', {"class": "current"}).text.strip().split(' ')[-1])
+AttributeError: 'NoneType' object has no attribute 'text'
+[2023-07-29 12:40:52,492: INFO/ForkPoolWorker-1] Task request_app.tasks.process_link[08ca5f00-8fce-4b8d-b0f1-ff8432b191f6] succeeded in 32.550297652000154s: None
+[2023-07-29 12:40:52,903: INFO/ForkPoolWorker-2] Task request_app.tasks.process_link[844b9fee-b8b8-4292-b178-ba5f976a2bc0] succeeded in 32.96066971599976s: None
+[2023-07-29 12:44:23,151: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:44:23,155: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 12:44:23,156: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:44:23,159: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 12:44:24,176: INFO/MainProcess] mingle: all alone
+[2023-07-29 12:44:24,187: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:44:52,087: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:44:52,090: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 12:44:52,091: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:44:52,093: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 12:44:53,115: INFO/MainProcess] mingle: all alone
+[2023-07-29 12:44:53,129: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:45:01,451: INFO/MainProcess] Task request_app.tasks.scrape_books[dc0afeff-43e7-4629-8b64-f1c0119cba6c] received
+[2023-07-29 12:45:03,488: INFO/MainProcess] Task request_app.tasks.process_link[61fb017f-6a1c-4b0e-9562-51bafde2dd0e] received
+[2023-07-29 12:45:03,495: INFO/MainProcess] Task request_app.tasks.process_link[7460aa9a-5dd7-46a3-a115-975c11c10166] received
+[2023-07-29 12:45:03,495: INFO/MainProcess] Task request_app.tasks.process_link[50ee9a19-9bbf-4a4a-be64-be4310785aa4] received
+[2023-07-29 12:45:03,496: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[dc0afeff-43e7-4629-8b64-f1c0119cba6c] succeeded in 2.0439497380011744s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 12:45:05,104: WARNING/ForkPoolWorker-1] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 12:45:05,107: WARNING/ForkPoolWorker-16] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 12:45:05,113: WARNING/ForkPoolWorker-2] https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[2023-07-29 12:45:05,115: ERROR/ForkPoolWorker-16] Task request_app.tasks.process_link[61fb017f-6a1c-4b0e-9562-51bafde2dd0e] raised unexpected: UnboundLocalError("local variable 'no_pages' referenced before assignment")
+Traceback (most recent call last):
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 477, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/app/trace.py", line 760, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 123, in process_link
+    links = get_product_links(url) # get all product links from category url
+  File "/home/shuvra/Documents/JobPreparation/Opika/distributed-task-pipeline/distributed_project/request_app/tasks.py", line 55, in get_product_links
+    for page_no in range(1,no_pages+1):
+UnboundLocalError: local variable 'no_pages' referenced before assignment
+[2023-07-29 12:45:35,215: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:45:35,218: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 12:45:35,219: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:45:35,221: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 12:45:36,242: INFO/MainProcess] mingle: all alone
+[2023-07-29 12:45:36,256: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:45:40,642: INFO/MainProcess] Task request_app.tasks.scrape_books[34d25092-9517-4a5c-836a-e6422ba6897b] received
+[2023-07-29 12:45:42,297: INFO/MainProcess] Task request_app.tasks.process_link[aef7cdb8-041c-47a3-b9db-bd69a4314f3b] received
+[2023-07-29 12:45:42,303: INFO/MainProcess] Task request_app.tasks.process_link[1f3d70ca-71af-4079-82f2-a0bcf7f11192] received
+[2023-07-29 12:45:42,304: INFO/MainProcess] Task request_app.tasks.process_link[5847658e-83bb-4b34-9e24-2e003d9304ab] received
+[2023-07-29 12:45:42,304: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[34d25092-9517-4a5c-836a-e6422ba6897b] succeeded in 1.661046847999387s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 12:45:43,914: WARNING/ForkPoolWorker-2] https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[2023-07-29 12:45:43,917: WARNING/ForkPoolWorker-16] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 12:45:43,923: WARNING/ForkPoolWorker-1] https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[2023-07-29 12:45:45,234: INFO/ForkPoolWorker-16] Task request_app.tasks.process_link[aef7cdb8-041c-47a3-b9db-bd69a4314f3b] succeeded in 2.935406468999645s: None
+[2023-07-29 12:46:20,378: INFO/ForkPoolWorker-2] Task request_app.tasks.process_link[5847658e-83bb-4b34-9e24-2e003d9304ab] succeeded in 38.07366475799972s: None
+[2023-07-29 12:46:31,543: INFO/ForkPoolWorker-1] Task request_app.tasks.process_link[1f3d70ca-71af-4079-82f2-a0bcf7f11192] succeeded in 49.23871512400001s: None
+[2023-07-29 12:50:19,296: INFO/MainProcess] Task request_app.tasks.scrape_books[fd80447f-b172-4991-afbb-b3e8c25dbfef] received
+[2023-07-29 12:50:21,012: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[fd80447f-b172-4991-afbb-b3e8c25dbfef] succeeded in 1.716194998998617s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html']
+[2023-07-29 12:50:21,014: INFO/MainProcess] Task request_app.tasks.process_link[08b3221c-7a64-45f9-9599-967f29203199] received
+[2023-07-29 12:50:22,542: WARNING/ForkPoolWorker-15] https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[2023-07-29 12:50:23,768: INFO/ForkPoolWorker-15] Task request_app.tasks.process_link[08b3221c-7a64-45f9-9599-967f29203199] succeeded in 2.7530200959990907s: None
+[2023-07-29 12:55:41,037: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:55:41,041: INFO/MainProcess] Connected to amqp://admin:**@127.0.0.1:5672/myvhost
+[2023-07-29 12:55:41,042: WARNING/MainProcess] /home/shuvra/Documents/Codes/.venv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:498: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2023-07-29 12:55:41,046: INFO/MainProcess] mingle: searching for neighbors
+[2023-07-29 12:55:42,064: INFO/MainProcess] mingle: all alone
+[2023-07-29 12:55:42,078: INFO/MainProcess] celery@localhost.localdomain ready.
+[2023-07-29 12:56:05,313: INFO/MainProcess] Task request_app.tasks.scrape_books[6b39e534-7076-468a-ade0-167e05fa1c46] received
+[2023-07-29 12:56:07,028: INFO/MainProcess] Task request_app.tasks.process_link[f631b7cb-f41c-4bee-8de1-ccd5880d63c8] received
+[2023-07-29 12:56:07,034: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[6b39e534-7076-468a-ade0-167e05fa1c46] succeeded in 1.7203354269986448s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html']
+[2023-07-29 12:56:27,084: INFO/ForkPoolWorker-16] Task request_app.tasks.process_link[f631b7cb-f41c-4bee-8de1-ccd5880d63c8] succeeded in 20.054945066000073s: None
+[2023-07-29 12:57:22,022: INFO/MainProcess] Task request_app.tasks.scrape_books[ea7cf77b-462d-4a08-9257-3fd797aae714] received
+[2023-07-29 12:57:23,906: INFO/ForkPoolWorker-15] Task request_app.tasks.scrape_books[ea7cf77b-462d-4a08-9257-3fd797aae714] succeeded in 1.882843508001315s: ['https://books.toscrape.com/catalogue/category/books/travel_2/index.html', 'https://books.toscrape.com/catalogue/category/books/mystery_3/index.html', 'https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html']
+[2023-07-29 12:57:23,906: INFO/MainProcess] Task request_app.tasks.process_link[0d4cded2-766e-4f13-ae02-de72c5fd7bf7] received
+[2023-07-29 12:57:23,907: INFO/MainProcess] Task request_app.tasks.process_link[2664c548-1299-4aa0-8516-13f71c740bb0] received
+[2023-07-29 12:57:23,908: INFO/MainProcess] Task request_app.tasks.process_link[56533471-9ab4-49ce-a338-8b3d0584ae75] received
+[2023-07-29 12:57:43,961: INFO/ForkPoolWorker-15] Task request_app.tasks.process_link[0d4cded2-766e-4f13-ae02-de72c5fd7bf7] succeeded in 20.052803067999776s: None
+[2023-07-29 12:58:08,878: INFO/ForkPoolWorker-1] Task request_app.tasks.process_link[56533471-9ab4-49ce-a338-8b3d0584ae75] succeeded in 44.968973234999794s: None
+[2023-07-29 12:58:19,301: INFO/ForkPoolWorker-16] Task request_app.tasks.process_link[2664c548-1299-4aa0-8516-13f71c740bb0] succeeded in 55.392241433999516s: None

@@ -1,0 +1,6 @@
+appmap_dir: tmp/appmap
+language: python
+name: distributed-task-pipeline
+packages:
+- path: distributed_project
+- path: request_app
