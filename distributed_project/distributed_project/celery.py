@@ -5,10 +5,10 @@ from django.conf import settings
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'distributed_project.settings')
 
-BROKER='amqp://admin:pass123@localhost:5672/myvhost'
+BROKER='amqp://admin:pass123@rabbit:5672/myvhost'
 
 app = Celery('distributed_project',
-              backend='rpc://', broker=BROKER
+               broker=BROKER
              )
 
 # Using a string here means the worker doesn't have to serialize

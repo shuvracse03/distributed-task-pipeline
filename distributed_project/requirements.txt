@@ -1,0 +1,8 @@
+Django==4.0.5
+djangorestframework==3.14.0
+psycopg2-binary==2.9.6
+django-celery-results==2.5.1
+celery==5.3.1
+PyAMQP==0.1.0.7
+bs4==0.0.1
+requests==2.28.2

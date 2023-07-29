@@ -9,7 +9,7 @@ from celery import group
 from request_app.models import *
 #BROKER ='pyamqp://guest@localhost//'
 
-BROKER='amqp://admin:pass123@localhost:5672/myvhost'
+BROKER='amqp://admin:pass123@rabbit:5672/myvhost'
 
 app = Celery('distributed_project', backend='rpc://', broker=BROKER)
 
