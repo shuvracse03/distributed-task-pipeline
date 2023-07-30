@@ -7,10 +7,10 @@ The task is to scrape data from https://books.toscrape.com/. User can select one
   docker-compose up
   
   From terminal:
-  curl -d '{"book_types":"Travel,Mystery,Historical Fiction"}' -H "Content-Type: application/json" -X POST http://localhost:8000/api/scrape_site/
-  curl -d '{"book_types":"all"}' -H "Content-Type: application/json" -X POST http://localhost:8000/api/scrape_site/
-  You will immediatly see some API response, and the scraping will start in the background. It takes some time to finish the tasks.
-  You can check the scraped data in:
+  curl -d '{"book_types":"Travel,Mystery,Historical Fiction"}' -H "Content-Type: application/json" -X POST http://localhost:8000/api/scrape_site/ <br>
+  curl -d '{"book_types":"all"}' -H "Content-Type: application/json" -X POST http://localhost:8000/api/scrape_site/ <br>
+  You will immediatly see some API response, and the scraping will start in the background. It takes some time to finish the tasks. <br>
+  You can check the scraped data in: <br>
   DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
